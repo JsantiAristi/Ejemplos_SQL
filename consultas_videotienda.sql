@@ -27,13 +27,13 @@ SELECT * FROM tienda LEFT JOIN tienda_telefono ON tienda.rut=tienda_telefono.rut
 WHERE tienda_telefono.telefono IS NULL
 
 --seleccionar nombre,descripción, nombre de tienda de todos los video juegos de la tienda con rut RUT12343
-SELECT juego.nombre, juego.descripcion, tienda.nombre FROM tienda 
-INNER JOIN juego_tienda ON juego_tienda.rut = tienda.rut 
-INNER JOIN juego ON juego_tienda.nombre = juego.nombre WHERE tienda.rut='RUT12343';
+SELECT juego.nombre, juego.descripcion, tienda.nombre, tienda.rut FROM tienda 
+JOIN juego_tienda ON juego_tienda.rut = tienda.rut 
+JOIN juego ON juego_tienda.nombre = juego.nombre WHERE tienda.rut='RUT12343';
 
 --selecionar nombre de juego, genero y descripción del género de los juegos cuyo género es FPS
 SELECT juego.nombre, genero_juego.nombre, genero_juego.descripcion FROM juego
-INNER JOIN genero_juego ON juego.nombre_genero_juego = genero_juego.nombre
+JOIN genero_juego ON juego.nombre_genero_juego = genero_juego.nombre
 WHERE juego.nombre_genero_juego = 'FPS'
 
 --seleccionar los juegos y los detalles de juego de los juegos con el serial 123456
