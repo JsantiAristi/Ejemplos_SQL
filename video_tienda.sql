@@ -1,6 +1,3 @@
---
--- PostgreSQL database dump
---
 
 -- Dumped from database version 12.3
 -- Dumped by pg_dump version 12.3
@@ -152,6 +149,10 @@ Fornite	123456	100	8
 Halo	225548	1	12
 Mario Bross	233598	2	5
 \.
+INSERT INTO detalles_juego(nombre, serial, numero_jugadores, edad_minima) VALUES ('Tomb Raider',123456,1,8)
+INSERT INTO detalles_juego(nombre, serial, numero_jugadores, edad_minima) VALUES ('Fornite',123456,100,8)
+INSERT INTO detalles_juego(nombre, serial, numero_jugadores, edad_minima) VALUES ('Halo',225548,1,12)
+INSERT INTO detalles_juego(nombre, serial, numero_jugadores, edad_minima) VALUES ('Mario Bross',233598,2,5)
 
 
 --
@@ -167,6 +168,10 @@ Plataforma	Avanzar saltando en distintas plataformas
 RPG	Juego de roleo
 \.
 
+INSERT INTO genero_juego(nombre, descripcion) VALUES ('Aventura','Exploración y puzzles')
+INSERT INTO genero_juego(nombre, descripcion) VALUES ('FPS','Disparos en primera persona')
+INSERT INTO genero_juego(nombre, descripcion) VALUES ('Plataforma','Avanzar saltando en distintas plataformas')
+INSERT INTO genero_juego(nombre, descripcion) VALUES ('RPG','Juego de roleo')
 
 --
 -- TOC entry 2851 (class 0 OID 16861)
@@ -182,6 +187,11 @@ Mario Bross	Un plomero debe rescatar a una princesa	Plataforma
 Pokémon	Atrapar y entrenar animales fantasticos	Aventura
 \.
 
+INSERT INTO juego(nombre, descripcion, nombre_genero_juego) VALUES ('Tomb Raider','Una mujer explora tumbas buscando tesoros','Aventura')
+INSERT INTO juego(nombre, descripcion, nombre_genero_juego) VALUES ('Fornite','Último jugador con vida gana','FPS')
+INSERT INTO juego(nombre, descripcion, nombre_genero_juego) VALUES ('Halo','Soldado de elite salva a la humanidad','FPS')
+INSERT INTO juego(nombre, descripcion, nombre_genero_juego) VALUES ('Mario Bross','Un plomero debe rescatar a una princesa','Plataforma')
+INSERT INTO juego(nombre, descripcion, nombre_genero_juego) VALUES ('Pokémon','Atrapar y entrenar animales fantasticos','Plataforma')
 
 --
 -- TOC entry 2855 (class 0 OID 16901)
@@ -199,6 +209,13 @@ Halo	RUT12344
 Fornite	RUT12344
 \.
 
+INSERT INTO juego_tienda(nombre, rut) VALUES ('Fornite','RUT12341')
+INSERT INTO juego_tienda(nombre, rut) VALUES ('Mario Bross','RUT12341')
+INSERT INTO juego_tienda(nombre, rut) VALUES ('Tomb Raider','RUT12343')
+INSERT INTO juego_tienda(nombre, rut) VALUES ('Halo','RUT12343')
+INSERT INTO juego_tienda(nombre, rut) VALUES ('Fornite','RUT12343')
+INSERT INTO juego_tienda(nombre, rut) VALUES ('Halo','RUT12344')
+INSERT INTO juego_tienda(nombre, rut) VALUES ('Fornite','RUT12344')
 
 --
 -- TOC entry 2853 (class 0 OID 16882)
@@ -213,6 +230,10 @@ RUT12344	Rokutx	2015-05-04
 RUT12341	Las tres Marías	2000-05-20
 \.
 
+INSERT INTO tienda(rut, nombre, fecha_creacion) VALUES ('RUT12342','MercaBato','1995-10-05')
+INSERT INTO tienda(rut, nombre, fecha_creacion) VALUES ('RUT12343','La ponderosa','2008-10-06')
+INSERT INTO tienda(rut, nombre, fecha_creacion) VALUES ('RUT12344','Rokutx','2015-05-04')
+INSERT INTO tienda(rut, nombre, fecha_creacion) VALUES ('RUT12341','Las tres Marías','2000-05-20')
 
 --
 -- TOC entry 2854 (class 0 OID 16891)
@@ -226,6 +247,9 @@ RUT12343	112223333
 RUT12343	153334488
 \.
 
+INSERT INTO tienda_telefono(rut, telefono) VALUES ('RUT12343','119995566')
+INSERT INTO tienda_telefono(rut, telefono) VALUES ('RUT12343','112223333')
+INSERT INTO tienda_telefono(rut, telefono) VALUES ('RUT12343','153334488')
 
 --
 -- TOC entry 2712 (class 2606 OID 16875)
